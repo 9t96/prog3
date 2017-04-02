@@ -11,20 +11,21 @@ class Rectangulo extends FiguraGeometrica
         parent::__construct();
         $this->_ladoUno = $l1;
         $this->_ladoDos = $l2;  
-        $this->CalcularDatos();  
+        $this->CalcularDatos();
     }
 
     private function CalcularDatos()
     {
-        parent::_perimetro = ($this->_ladoUno*2)+($this->_ladoDos*2);
-        parent::_superficie = $this->_ladoUno*$this->_ladoDos;
+        $this->_perimetro = (($this->_ladoUno)*2) + (($this->_ladoDos)*2);
+        $this->_superficie = $this->_ladoUno * $this->_ladoDos;
+
     }
 
     public function Dibujar()
     {
-        for ($i=0; $i < $_ladoUno; $i++) { 
+        for ($i=0; $i < $this->_ladoDos; $i++) { 
             
-            for ($t=0; $t < $_ladoDos; $t++) { 
+            for ($t=0; $t < $this->_ladoUno; $t++) { 
                 echo "*";
             }
             $t=0;

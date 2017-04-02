@@ -11,13 +11,13 @@ class Triangulo extends FiguraGeometrica
         parent::__construct();
         $this->_base=$b;
         $this->_altura=$n;
-        CalcularDatos();
+        $this->CalcularDatos();
     }
 
     private function CalcularDatos()
     {
-        $this->_perimetro = $_base * $_altura / 2;
-        $this->_superficie = $_base * $_altura;
+        parent::$_perimetro = $this->_base * $this->_altura / 2;
+        parent::$_superficie = $this->_base * $this->_altura;
 
     }
 
