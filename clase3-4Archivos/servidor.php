@@ -1,6 +1,5 @@
 <?php 
-require_once ('/Clases/cosa.php');
-
+require_once ('Clases/cosa.php');
 /*
 var_dump($_POST,$_GET,$_REQUEST);
 */
