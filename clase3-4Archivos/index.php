@@ -6,10 +6,13 @@
 </head>
 
 <body>
+
     <!--Action destino de la peticion Method:forma de envio-->
-    <form action="servidor.php" method="post">
+	<!--form para ingreso de datos  //puede terner 'name'-->  
+ 	<form action="servidor.php" method="post">
         Nombre: <input type="text" name="txtName">
-        <input type="submit" value= " enviar datos"name="enviar" ><br/>
+        <!--Input: define un lugar donde es usuario puede ingresar datos-->
+        <input type="submit" value= " enviar datos" name="enviar" ><br/>
         <input type="submit" value= "leer de archivo" name="leer"><br/>
         
     </form>

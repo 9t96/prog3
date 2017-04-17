@@ -3,22 +3,22 @@ require_once ('Clases/MiClase.php');
 
 if(isset($_POST["leer"]))
 {
-    $datos = MiClase::CargarPordMem();
+    $datos = MiClase::Mostrar();
 
     echo     "<table class='table' border='1px solid black' border='1' width='100%' align='center'>
         <thead>
         <tr style='background-color:powderblue;'>
             <th>Nombre</th>
-            <th>Apellido</th>   
+            <th>Codigo</th>   
             <th>Imagen</th>
         </tr>
         </thead>";
 
     foreach ($datos as $value) {
         echo "  <tr>
-                    <td> ".$value->getNombre()."</td>
-                    <td>".$value->getCodBarras()."</td>
-                    <td>"."<img src='Archivos/".$value->getPath()."'></img>.</img>.</td>"."
+                    <td> ".$value->getCodigo()."</td>
+                    <td>".$value->getNombre()."</td>
+                    <td>"."<img src='Archivos/".$value->getPath()."'width='100px' height='100px'/></td>"."
                 </tr>
             ";
     }
@@ -29,7 +29,7 @@ else if(isset($_POST["enviar"]) && isset($_FILES["archivo"]))
 {
     $path = "Archivos/".$_FILES["archivo"]["name"];
     move_uploaded_file($_FILES["archivo"]["tmp_name"],$path);
-    $prod = new Producto($_POST["txtName"],$_POST["txtCodBarra"],basename($_FILES["archivo"]["name"]));
+    $prod = new MiClase($_POST["txtName"],$_POST["txtCodBarra"],basename($_FILES["archivo"]["name"]));
     $prod->Agregar();
 }
 
