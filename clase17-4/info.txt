@@ -1,0 +1,29 @@
+
+
+Estable conexion con la base
+-host
+-usuario
+-pass
+-Nombre de la bse(no la tabla).
+mysqli_connect("localhost","root","","cdcol");
+
+retorna la conexion o null caso contrario.
+
+/**********/
+
+Ejecuta una consulta y trae los datos.
+-param1 -> conexion.
+-param2 -> instruccion.
+-return -> datos table.
+$table = mysqli_query($rsc,"SELECT * FROM cds");
+
+
+/****************/
+Trae una fila de la tabla.
+Y deja el cursor para leer la proxima.
+$fila = mysqli_fetch_array($table);
+
+/*****************/
+Devuelve el ultimo id que se inserto.
+
+$maxid = mysqli_insert_id($rsc);
