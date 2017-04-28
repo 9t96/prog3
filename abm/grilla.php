@@ -1,5 +1,6 @@
 <?php
 	require_once('clases/producto.php');
+	require_once('Acciones.php');
 ?>
 <html>
 <head>
@@ -20,30 +21,7 @@
 		</div>
 		<div class="CajaInicio animated bounceInRight">
 			<h1>Listado de PRODUCTOS</h1>
-
-<?php 
-
-$ArrayDeProductos = Producto::TraerTodosLosProductos();
-
-echo "<table class='table'>
-		<thead>
-			<tr>
-				<th>  COD. BARRA </th>
-				<th>  NOMBRE     </th>
-				<th>  FOTO       </th>
-			</tr> 
-		</thead>";   	
-
-	foreach ($ArrayDeProductos as $prod){
-
-		echo " 	<tr>
-					<td>".$prod->GetCodBarra()."</td>
-					<td>".$prod->GetNombre()."</td>
-					<td><img src='archivos/".$prod->GetPathFoto()."' width='100px' height='100px'/></td>
-				</tr>";
-	}	
-echo "</table>";		
-?>
+			<?php TraerTabla();?>
 		</div>
 	</div>
 </body>
