@@ -57,6 +57,7 @@ function Deslogear()
 			{
 				alert("Erro al deslogear");
 			}
+			
 		})		
 		.fail(function(jqXHR, textStatus, errorThrown){
 						alert(jqXHR.responseText + "\n" + textStatus + "\n" + errorThrown);
