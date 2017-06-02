@@ -8,11 +8,6 @@ function Guardar()
 		url:"Administrar.php",
 		data:datos,
 		async:true,
-		statusCode:
-		{
-			200:function(){ alert("Se encontro");},
-			404:function(){ alert("Error 404");}
-		}
 		})
 		.done(function(valor){
 
@@ -41,11 +36,6 @@ function Deslogear()
 		url:"Administrar.php",
 		data:logout,
 		async:true,
-		statusCode:
-		{
-			200:function(){ alert("Se encontro");},
-			404:function(){ alert("Error 404");}
-		}
 		})
 		.done(function(valor){
 
@@ -75,11 +65,6 @@ function GuardarCookieColor()
 		url:"Administrar.php",
 		data:micolor,
 		async:true,
-		statusCode:
-		{
-			200:function(){ alert("Se encontro");},
-			404:function(){ alert("Error 404");}
-		}
 		})
 		.done(function(valor){
 
