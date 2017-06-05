@@ -1,0 +1,105 @@
+Para instalar.
+1-generar composer.
+2-descargar composer e instalarlo   GETCOMPOSER.ORG.
+3-en la consola darle a "composer install".
+4-Generar metodos de varios tipos en la carpeta del composer.
+
+
+
+
+
+<?php
+require_once "vendor/autoload.php";
+
+$app = new \Slim\Slim();
+
+
+
+METODO es GET POST PUT DELETE.
+
+//IMPLEMENTAR INSTRUCCIONES GET, POST, PUT, DELETE
+//$app->METODO('/RUTEO', CALL_BACK);
+                La barra normal.
+CALL BACK debe ser UNA FUNCION anonima de php.
+
+$app->run();
+
+
+
+
+
+
+// Si necesitamos acceder a alguna variable global en el framework
+// Tenemos que pasarla con use() en la cabecera de la función.
+$app->METODO('/RUTEO', function() use($app) {
+
+// Indicamos el tipo de contenido y condificación que devolvemos desde el framework Slim.
+	$app->response->headers->set("Content-type", "application/json");
+	$app->response->status(200);
+	$app->response->body(json_encode(...));
+});
+
+
+POSTMAN
+
+
+.*
+
+y en la consola "composer update".
+
+
+
+<?php
+class cd
+{
+    public $titulo;
+    public $interprete;
+    public $anio;
+
+    public function MostrarDatos()
+    {
+            return $this->titulo." - ".$this->interprete." - ".$this->anio;
+    }
+    
+    public static function TraerUnCdAnioParamNombreArray($titulo, $anio)
+    {    
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        
+        //..............
+        
+        return $cdBuscado; 
+    }
+    
+    public function InsertarElCdParametros()
+    {
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        
+        //...............
+
+        $consulta->execute();   
+
+    }
+    
+    public static function ModificarCd($id, $titulo, $anio, $cantante)
+    {
+
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        
+        //...........
+
+        return $consulta->execute();
+
+    }
+
+    public static function EliminarCd($id)
+    {
+
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+
+        //.....
+
+        return $consulta->execute();
+
+    }
+    
+}
