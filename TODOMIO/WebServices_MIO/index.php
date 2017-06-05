@@ -15,19 +15,19 @@
 	<div class="container" >
 		
 		<div class="text-centered" style="margin:0 auto">
-			
+
 			<form class="form" action="index.php" method="post">
 			
-			<input class="form-control" type="text" name="num1" id="n1" placeholder="Numero uno" style="width:250px">
+				<input class="form-control" type="text" name="num1" id="n1" placeholder="Numero uno" style="width:250px">
+				
+				<input class="form-control" type="text" name="num2" id="n2" placeholder="Numero dos" style="width:250px">
+				
+				<input class="btn btn-primary" type="submit" name="btnSuma" value="Sumar">
+				
+				<input class="btn btn-primary" type="submit" name="btnMultiplicar" value="Multiplicar">
 			
-			<input class="form-control" type="text" name="num2" id="n2" placeholder="Numero dos" style="width:250px">
-			
-			<input class="btn btn-primary" type="submit" name="btnSuma" value="Sumar">
-			
-			<input class="btn btn-primary" type="submit" name="btnMultiplicar" value="Multiplicar">
-		
-			<input class="btn btn-primary" type="submit" name="btnRestar" value="Restar">
-		</form>
+				<input class="btn btn-primary" type="submit" name="btnRestar" value="Restar">
+			</form>
 		</div>
 	
 	</div>
